@@ -24,8 +24,6 @@ export default function CreateReportPage() {
   const [location, setLocation] = useState(''); // Vị trí người dùng nhập
   const [pollutionLevel, setPollutionLevel] = useState(50); // State để lưu giá trị thanh trượt
 
-  // Tạo một tham chiếu (ref) để "chạm" vào input file bị ẩn
-  const fileInputRef = useRef(null);
 
   // Hàm được gọi khi người dùng chọn một file ảnh
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -249,6 +247,7 @@ export default function CreateReportPage() {
     </div>
   );
 }
+
 
 
 
