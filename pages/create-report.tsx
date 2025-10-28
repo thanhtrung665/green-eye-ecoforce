@@ -20,6 +20,7 @@ export default function CreateReportPage() {
   // Các "bộ nhớ" (state) để lưu trữ thông tin
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Trạng thái dropdown mở hay đóng
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null); // <-- THÊM DÒNG NÀY
   const [location, setLocation] = useState(''); // Vị trí người dùng nhập
   const [pollutionLevel, setPollutionLevel] = useState(50); // State để lưu giá trị thanh trượt
 
@@ -248,6 +249,7 @@ export default function CreateReportPage() {
     </div>
   );
 }
+
 
 
 
