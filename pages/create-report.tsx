@@ -28,10 +28,12 @@ export default function CreateReportPage() {
 
   // Hàm được gọi khi người dùng chọn một file ảnh
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files[0];
-    if (file) {
+  // THÊM KIỂM TRA Ở ĐÂY
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
       setSelectedImage(URL.createObjectURL(file));
-    }
+  }
+};
   };
 
   // Hàm được gọi khi người dùng nhấn vào khu vực tải ảnh
@@ -246,4 +248,5 @@ export default function CreateReportPage() {
     </div>
   );
 }
+
 
