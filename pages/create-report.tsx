@@ -27,7 +27,7 @@ export default function CreateReportPage() {
   const fileInputRef = useRef(null);
 
   // Hàm được gọi khi người dùng chọn một file ảnh
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files[0];
     if (file) {
       setSelectedImage(URL.createObjectURL(file));
@@ -246,3 +246,4 @@ export default function CreateReportPage() {
     </div>
   );
 }
+
